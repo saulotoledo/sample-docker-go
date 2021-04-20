@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  dev:
+    image: go-1.16-dev
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: go-1.16-dev
+    network_mode: bridge
+    volumes:
+      - ./src:/go/src/
+      - ./build:/go/build/
